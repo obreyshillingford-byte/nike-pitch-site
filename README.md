@@ -122,13 +122,13 @@ laptops aren't — this is a common way a site works locally and 404s live).
 
 ## Before sharing the link
 
-- **Four Vimeo embeds** — the Machine reel plus three case studies (Con Edison,
-  NFL, TIME). Con Ed and TIME are unlisted and carry privacy hashes in their
-  URLs. Unlisted videos often also restrict embed domains: add the deployed
-  domain to each video's allowed domains in Vimeo, or they show an error
-  instead of playing.
-- **Deck button** → Dropbox PDF. Set the link to "anyone with the link can
-  view" or viewers hit a request-access wall.
+- **Six Vimeo embeds** — the Machine reel plus five case studies (Con Edison,
+  NFL, TIME, Microsoft, Amazon Ads). All but NFL are unlisted and carry privacy
+  hashes in their URLs. Unlisted videos often also restrict embed domains: add
+  the deployed domain to each video's allowed domains in Vimeo, or they show an
+  error instead of playing.
+- **Two deck buttons** → both Dropbox PDFs (Proposal, Follow-Up Deck). Set each
+  link to "anyone with the link can view" or viewers hit a request-access wall.
 - **`login-bg.png` and `quote-breaker.png`** are ~17MB combined. Vercel's CDN
   handles it; it's still slow on a phone.
 - **Fonts** are served to every visitor — confirm the license covers web use.
