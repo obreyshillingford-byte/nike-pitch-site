@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Code and Theory for Nike</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  @font-face { font-family: 'Futura Cond'; src: url('./assets/fonts/Futura-ExtraBoldCondensed.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: block; }
+  @font-face { font-family: 'Futura CT'; src: url('./assets/fonts/Futura-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Futura CT'; src: url('./assets/fonts/Futura-Book.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Futura CT'; src: url('./assets/fonts/Futura-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Futura CT'; src: url('./assets/fonts/Futura-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+</style>
+<style>
+  body { margin: 0; background: rgb(102,102,102); color: rgb(255,255,255); -webkit-font-smoothing: antialiased; font-family: 'Futura CT', Futura, 'Century Gothic', sans-serif; }
+  a { color: rgb(255,255,255); text-decoration: none; }
+  a:hover { color: rgba(255,255,255,0.62); }
+  ::selection { background: rgb(255,255,255); color: rgb(0,0,0); }
+  input::placeholder { color: rgba(255,255,255,0.45); }
+</style>
+</helmet>
+
+<div style="position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; overflow: hidden; background: url(./assets/login-bg.png) 36.172% 3.058% / 111.488% 111.08% no-repeat, linear-gradient(rgb(102,102,102), rgb(102,102,102)); font-family: 'Futura CT', Futura, 'Helvetica Neue', sans-serif">
+
+  <div style="position: absolute; left: 63.33%; top: 72.68%; width: 41.98%; height: 35.65%; border-radius: 50%; background: rgba(31,37,30,0.3); mix-blend-mode: multiply; pointer-events: none"></div>
+  <div style="position: absolute; inset: 0; background: linear-gradient(to left, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.28) 26%, rgba(0,0,0,0) 54%); pointer-events: none"></div>
+  <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0) 26%); pointer-events: none"></div>
+
+  <h1 style="position: relative; margin: 0; padding: clamp(22px, 2.13vw, 41px) clamp(18px, 1.82vw, 35px) 0; font-family: 'Futura Cond', 'Futura CT', Futura, sans-serif; font-weight: 800; font-size: min(10.94vw, calc((100vw - 70px) / 3.6)); line-height: 0.81; letter-spacing: -0.05em; text-transform: uppercase; white-space: nowrap">Welcome</h1>
+
+  <div style="position: relative; display: flex; justify-content: flex-end; padding: 0 clamp(18px, 2.08vw, 40px) clamp(80px, 6vw, 116px)">
+    <form onSubmit="{{ onSubmit }}" style="width: clamp(280px, 31.25vw, 600px); display: flex; flex-direction: column; gap: 34px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <label for="login-code" style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: rgba(255,255,255,0.72)">Password</label>
+        <input id="login-code" type="password" name="code" autocomplete="current-password" placeholder="••••••••" value="{{ code }}" onChange="{{ onCode }}" style="width: 100%; box-sizing: border-box; background: transparent; border: 0; border-bottom: 1px solid rgba(255,255,255,0.45); border-radius: 0; padding: 0 0 14px; color: rgb(255,255,255); font-family: inherit; font-size: 24px; line-height: 32px; letter-spacing: -0.01em; outline: none" style-focus="border-bottom-color: rgb(255,255,255)" />
+      </div>
+
+      <div style="height: 1px; background: rgba(255,255,255,0.2); margin-top: 6px"></div>
+
+      <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+        <div style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: rgb(255,255,255)">{{ error }}</div>
+      </sc-if>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+        <button type="submit" style="display: inline-flex; align-items: center; gap: 16px; background: rgb(255,255,255); color: rgb(0,0,0); border: 0; border-radius: 0; padding: 20px 32px; font-family: inherit; font-size: 20px; line-height: 28px; letter-spacing: -0.02em; cursor: pointer" style-hover="background: rgb(220,220,220)">Enter<span style="font-size: 20px; line-height: 28px">→</span></button>
+        <span style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: rgba(255,255,255,0.72)">FY27 · Coupa Event #4817</span>
+      </div>
+    </form>
+  </div>
+
+  <div style="position: absolute; left: clamp(18px, 1.82vw, 35px); bottom: clamp(24px, 2.6vw, 50px); display: flex; align-items: center; gap: clamp(10px, 1.5vw, 20px)">
+    <img src="./assets/nav-code.png" alt="Code and Theory" style="width: auto; height: clamp(9px, 0.95vw, 12px); display: block" />
+    <span style="width: 1px; height: 16px; background: rgba(255,255,255,0.4)"></span>
+    <img src="./assets/nav-instrument.png" alt="Instrument" style="width: auto; height: clamp(9px, 0.95vw, 12px); display: block" />
+    <span style="width: 1px; height: 16px; background: rgba(255,255,255,0.4)"></span>
+    <img src="./assets/logo-stagwell-white.svg" alt="Stagwell" style="width: auto; height: clamp(13px, 1.35vw, 17px); display: block" />
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { code: '', error: '' };
+
+  renderVals() {
+    return {
+      code: this.state.code,
+      error: this.state.error,
+      onCode: e => this.setState({ code: e.target.value, error: '' }),
+      onSubmit: e => {
+        e.preventDefault();
+        const { code } = this.state;
+        if (!code.trim()) {
+          this.setState({ error: 'Enter the password to continue.' });
+          return;
+        }
+        if (code.trim().toLowerCase() !== 'partnership') {
+          this.setState({ error: 'That password is not right. Try again.' });
+          return;
+        }
+        window.location.href = './site.html';
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

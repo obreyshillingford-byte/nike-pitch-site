@@ -1,0 +1,10 @@
+{
+  "name": "nike-fy27-pitch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Code and Theory for Nike — FY27 pitch site. Static HTML, no build step.",
+  "scripts": {
+    "build": "echo \"Static site — nothing to build.\"",
+    "dev": "npx --yes serve . -l 3000"
+  }
+}
